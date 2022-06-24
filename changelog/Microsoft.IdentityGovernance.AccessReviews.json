@@ -1053,6 +1053,24 @@
       "CreatedDateTime": "2022-06-27T19:40:43.984Z",
       "WorkloadArea": "Identity and access",
       "SubArea": "Governance"
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "d8fdc071-6f2b-481e-ad87-29c4ff1145bf",
+          "ApiChange": "Resource",
+          "ChangedApiName": "groupPeerOutlierRecommendationInsightSettings",
+          "ChangeType": "Addition",
+          "Description": "Added the [groupPeerOutlierRecommendationInsightSettings](https://docs.microsoft.com/en-us/graph/api/resources/groupPeerOutlierRecommendationInsightSettings?view=graph-rest-beta) resource type. Use this type to configure insight settings based on the user's last sign-in date and time into a tenant or application.",
+          "Target": "groupPeerOutlierRecommendationInsightSettings"
+        }
+      ],
+      "Id": "fa3bc46d-ca03-4d78-86a2-66c3f311941a",
+      "Cloud": "prd",
+      "Version": "beta",
+      "CreatedDateTime": "2022-06-24T19:40:43.984Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Governance"
     }
   ]
 }
