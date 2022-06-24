@@ -254,6 +254,32 @@
 		},
 		{
 			"ChangeList": [
+			  {
+				"Id": "82a6da61-eb06-42a4-84e5-52fe604b99c9",
+				"ApiChange": "Resource",
+				"ChangedApiName": "authenticationContextClassReference",
+				"ChangeType": "Addition",
+				"Description": "Added the [authenticationContextClassReference](https://docs.microsoft.com/en-us/graph/api/resources/authenticationContextClassReference?view=graph-rest-1.0) resource",
+				"Target": "authenticationContextClassReference"
+			  },
+			  {
+				"Id": "82a6da61-eb06-42a4-84e5-52fe604b99c9",
+				"ApiChange": "Resource",
+				"ChangedApiName": "authenticationContextClassReferences",
+				"ChangeType": "Addition",
+				"Description": "Added the **authenticationContextClassReferences** relationship to the [conditionalAccessRoot](https://docs.microsoft.com/en-us/graph/api/resources/conditionalAccessRoot?view=graph-rest-1.0) resource.",
+				"Target": "conditionalAccessRoot"
+			  }
+			],
+			"Id": "82a6da61-eb06-42a4-84e5-52fe604b99c9",
+			"Cloud": "Prod",
+			"Version": "v1.0",
+			"CreatedDateTime": "2022-05-13T17:48:36.5277367Z",
+			"WorkloadArea": "Identity and access",
+			"SubArea": "Identity and sign-in"
+		},
+		{
+			"ChangeList": [
 				{
 					"Id": "3e561e90-bb23-498e-970c-4e1d562d4b3d",
 					"ApiChange": "Member",
