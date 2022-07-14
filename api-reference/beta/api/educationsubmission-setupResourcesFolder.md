@@ -43,10 +43,12 @@ Provide an empty json `{}` as request body for this method.
 ## Response
 If successful, this method returns a `200 Ok` response code. The body will contain the submission model.
 
-## Example 1: When assignment is valid for submission
+## Examples
+
+### Example 1: When assignment is valid for submission
 The following example shows how to call this API.
 
-### Request
+#### Request
 The following is an example of a request.
 
 
@@ -82,7 +84,7 @@ Content-type: application/json
 
 ---
 
-### Response
+#### Response
 The following is an example of a response. 
 
 <!-- {
@@ -134,11 +136,11 @@ Content-type: application/json
     "submittedResources": []
 }
 ```
-## Example 2: When assignment is no longer open for submission
+### Example 2: When assignment is no longer open for submission
 The following example shows how to call this API.
 Check that allowedLateSubmissions = true and the current time is less than both dueDateTime & closeDateTime
 
-### Request
+#### Request
 The following is an example of a request.
 
 
@@ -155,7 +157,7 @@ Content-type: application/json
 }
 ```
 
-### Response
+#### Response
 The following is an example of a response. 
 
 <!-- {
@@ -179,11 +181,11 @@ Content-type: application/json
 }
 ```
 
-## Example 3: When assignment is already in submitted state
+### Example 3: When assignment is already in submitted state
 The following example shows how to call this API.
 Check that status != submitted
 
-### Request
+#### Request
 The following is an example of a request.
 
 
@@ -200,7 +202,7 @@ Content-type: application/json
 }
 ```
 
-### Response
+#### Response
 The following is an example of a response. 
 
 <!-- {
