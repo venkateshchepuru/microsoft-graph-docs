@@ -41,10 +41,12 @@ Provide an empty json `{}` as request body for this method.
 ## Response
 If successful, this method returns a `200 Ok` response code. The body will contain the submission model.
 
-## Example 1: When assignment is valid for submission
+## Examples
+
+### Example 1: When assignment is valid for submission
 The following example shows how to call this API.
 
-### Request
+#### Request
 The following is an example of a request.
 
 
@@ -80,7 +82,7 @@ Content-type: application/json
 
 ---
 
-### Response
+#### Response
 The following is an example of a response. 
 
 <!-- {
@@ -133,11 +135,11 @@ Content-type: application/json
 }
 ```
 
-## Example 2: When assignment is no longer open for submission -
+### Example 2: When assignment is no longer open for submission -
 The following example shows how to call this API.
 Check that allowedLateSubmissions = true and the current time is less than both dueDateTime & closeDateTime
 
-### Request
+#### Request
 The following is an example of a request.
 
 
@@ -145,7 +147,7 @@ The following is an example of a request.
   "blockType": "request",
   "name": "educationsubmission_setupresourcesfolder"
 }-->
-```msgraph-interactive
+```http
 POST https://graph.microsoft.com/v1.0/education/classes/b07edbef-7420-4b3d-8f7c-d599cf21e069/assignments/1e5222bd-b7d2-4d64-8a22-74b722ce2fc6/submissions/803fb5dd-3553-455f-3d94-f79fb54a1003/setUpResourcesFolder
 Content-type: application/json
 
@@ -154,7 +156,7 @@ Content-type: application/json
 ```
 
 
-### Response
+#### Response
 The following is an example of a response. 
 
 <!-- {
@@ -178,11 +180,11 @@ Content-type: application/json
 }
 ```
 
-## Example 3: When assignment is already in submitted state
+### Example 3: When assignment is already in submitted state
 The following example shows how to call this API.
 Check that status != submitted
 
-### Request
+#### Request
 The following is an example of a request.
 
 
@@ -190,7 +192,7 @@ The following is an example of a request.
   "blockType": "request",
   "name": "educationsubmission_setupresourcesfolder"
 }-->
-```msgraph-interactive
+```http
 POST https://graph.microsoft.com/v1.0/education/classes/b07edbef-7420-4b3d-8f7c-d599cf21e069/assignments/1e5222bd-b7d2-4d64-8a22-74b722ce2fc6/submissions/803fb5dd-3553-455f-3d94-f79fb54a1003/setUpResourcesFolder
 Content-type: application/json
 
@@ -198,7 +200,7 @@ Content-type: application/json
 }
 ```
 
-### Response
+#### Response
 The following is an example of a response. 
 
 <!-- {
