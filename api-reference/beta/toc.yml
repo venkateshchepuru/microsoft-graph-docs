@@ -10955,7 +10955,7 @@ items:
       expanded: true
       items:
         - name: Inbound Flows
-          href: resource/industrydata-inboundflow.md
+          href: resources/industrydata-inboundflow.md
           items:
             - name: List Inbound Flows
               href: api/industrydata-industrydatatenant-list-inboundflows.md
@@ -10968,7 +10968,7 @@ items:
             - name: Delete Inbound flow
               href: api/industrydata-industrydatatenant-delete-inboundflows.md
         - name: Reference Definitions
-          href: resource/industrydata-referencedefinition.md
+          href: resources/industrydata-referencedefinition.md
           items:
             - name: List Reference Definitions
               href: api/industrydata-industrydatatenant-list-referencedefinitions.md
