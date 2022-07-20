@@ -41,7 +41,7 @@ POST /education/classes/{id}/assignments/{id}/submissions/{id}/setUpResourcesFol
 Provide an empty json `{}` as request body for this method.
 
 ## Response
-If successful, this method returns a `200 Ok` response code. The body will contain the submission model.
+If successful, this method returns a `200 OK` response code. The body will contain the submission model.
 
 ## Examples
 
@@ -85,7 +85,7 @@ Content-type: application/json
 ---
 
 #### Response
-The following is an example of a response. 
+The following is an example of the response.
 
 <!-- {
   "blockType": "response",
@@ -158,7 +158,7 @@ Content-type: application/json
 ```
 
 #### Response
-The following is an example of a response. 
+The following is an example of the response. 
 
 <!-- {
   "blockType": "response",
@@ -166,7 +166,7 @@ The following is an example of a response.
   "@odata.type": "microsoft.graph.educationSubmission"
 } -->
 ```http
-HTTP/1.1 400 Bad request
+HTTP/1.1 400 Bad Request
 Content-type: application/json
 
 {
@@ -188,8 +188,6 @@ Check that status != submitted
 #### Request
 The following is an example of a request.
 
-
-
 <!-- {
   "blockType": "request",
   "name": "educationsubmission_setupresourcesfolder"
@@ -203,7 +201,7 @@ Content-type: application/json
 ```
 
 #### Response
-The following is an example of a response. 
+The following is an example of the response.
 
 <!-- {
   "blockType": "response",
@@ -211,7 +209,7 @@ The following is an example of a response.
   "@odata.type": "microsoft.graph.educationSubmission"
 } -->
 ```http
-HTTP/1.1 400 Bad request
+HTTP/1.1 400 Bad Request
 Content-type: application/json
 
 {
