@@ -1,13 +1,14 @@
 ---
 title: "Create sourceSystemDefinition"
 description: "Create a new sourceSystemDefinition object."
-author: "**TODO: Provide Github Name. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=API/Document/Guidelines/Metadata)**"
+author: "mlafleur"
 ms.localizationpriority: medium
-ms.prod: "**TODO: Add MS prod. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=API/Document/Guidelines/Metadata)**"
+ms.prod: "industrydata"
 doc_type: apiPageType
 ---
 
 # Create sourceSystemDefinition
+
 Namespace: microsoft.graph.industryData
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
@@ -15,13 +16,14 @@ Namespace: microsoft.graph.industryData
 Create a new sourceSystemDefinition object.
 
 ## Permissions
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
-|Permission type|Permissions (from least to most privileged)|
-|:---|:---|
-|Delegated (work or school account)|**TODO: Provide applicable permissions.**|
-|Delegated (personal Microsoft account)|**TODO: Provide applicable permissions.**|
-|Application|**TODO: Provide applicable permissions.**|
+| Permission type                        | Permissions (from least to most privileged) |
+| :------------------------------------- | :------------------------------------------ |
+| Delegated (work or school account)     | **TODO: Provide applicable permissions.**   |
+| Delegated (personal Microsoft account) | **TODO: Provide applicable permissions.**   |
+| Application                            | **TODO: Provide applicable permissions.**   |
 
 ## HTTP request
 
@@ -29,28 +31,29 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+
+```http
 POST /external/industryData/sourceSystems
 ```
 
 ## Request headers
-|Name|Description|
-|:---|:---|
-|Authorization|Bearer {token}. Required.|
-|Content-Type|application/json. Required.|
+
+| Name          | Description                 |
+| :------------ | :-------------------------- |
+| Authorization | Bearer {token}. Required.   |
+| Content-Type  | application/json. Required. |
 
 ## Request body
+
 In the request body, supply a JSON representation of the [sourceSystemDefinition](../resources/industrydata-sourcesystemdefinition.md) object.
 
 You can specify the following properties when creating a **sourceSystemDefinition**.
 
-|Property|Type|Description|
-|:---|:---|:---|
-|displayName|String|Name of the source system. Required.|
-|userMatchingSettings|[microsoft.graph.industryData.userMatchingSetting](../resources/industrydata-usermatchingsetting.md) collection|A collection of user matching settings by roleGroup. Optional.|
-|vendor|String|Name of the vendor who supplies the source system. Optional.|
-
-
+| Property             | Type                                                                                                            | Description                                                    |
+| :------------------- | :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- |
+| displayName          | String                                                                                                          | Name of the source system. Required.                           |
+| userMatchingSettings | [microsoft.graph.industryData.userMatchingSetting](../resources/industrydata-usermatchingsetting.md) collection | A collection of user matching settings by roleGroup. Optional. |
+| vendor               | String                                                                                                          | Name of the vendor who supplies the source system. Optional.   |
 
 ## Response
 
@@ -59,13 +62,16 @@ If successful, this method returns a `201 Created` response code and a [sourceSy
 ## Examples
 
 ### Request
+
 The following is an example of a request.
+
 <!-- {
   "blockType": "request",
   "name": "create_sourcesystemdefinition_from_"
 }
 -->
-``` http
+
+```http
 POST https://graph.microsoft.com/beta/external/industryData/sourceSystems
 Content-Type: application/json
 Content-length: 250
@@ -82,17 +88,20 @@ Content-length: 250
 }
 ```
 
-
 ### Response
+
 The following is an example of the response
->**Note:** The response object shown here might be shortened for readability.
+
+> **Note:** The response object shown here might be shortened for readability.
+
 <!-- {
   "blockType": "response",
   "truncated": true,
   "@odata.type": "microsoft.graph.industryData.sourceSystemDefinition"
 }
 -->
-``` http
+
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -107,4 +116,3 @@ Content-Type: application/json
   "vendor": "String"
 }
 ```
-

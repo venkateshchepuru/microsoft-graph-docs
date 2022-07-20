@@ -1,19 +1,19 @@
 ---
-title: "Delete inboundFlow"
-description: "Deletes an inboundFlow object."
+title: "List yearTimePeriodDefinitions"
+description: "Get a list of the yearTimePeriodDefinitions objects and their properties."
 author: "mlafleur"
 ms.localizationpriority: medium
 ms.prod: "industrydata"
 doc_type: apiPageType
 ---
 
-# Delete inboundFlow
+# List yearTimePeriodDefinition
 
 Namespace: microsoft.graph.industryData
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Deletes an [inboundFlow](../resources/industrydata-inboundflow.md) object.
+Get a list of the [yearTimePeriodDefinition](../resources/industrydata-yearTimePeriodDefinition.md) objects and their properties.
 
 ## Permissions
 
@@ -33,7 +33,7 @@ One of the following permissions is required to call this API. To learn more, in
 -->
 
 ```http
-DELETE /external/industryData/inboundFlows/{inboundFlowId}/$ref
+GET /external/industryData/years
 ```
 
 ## Request headers
@@ -48,7 +48,7 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `204 No Content` response code.
+If successful, this method returns a `200 OK` response code and a collection of [yearTimePeriodDefinition](../resources/industrydata-yearTimePeriodDefinition.md) objects in the response body.
 
 ## Examples
 
@@ -58,12 +58,12 @@ The following is an example of a request.
 
 <!-- {
   "blockType": "request",
-  "name": "delete_inboundflow"
+  "name": "list_yeartimeperioddefinition"
 }
 -->
 
 ```http
-DELETE https://graph.microsoft.com/beta/external/industryData/inboundFlows/{inboundFlowId}
+GET https://graph.microsoft.com/beta/external/industryData/years
 ```
 
 ### Response
@@ -74,10 +74,25 @@ The following is an example of the response
 
 <!-- {
   "blockType": "response",
-  "truncated": true
+  "truncated": true,
+  "@odata.type": "Collection(microsoft.graph.industryData.yearTimePeriodDefinition)"
 }
 -->
 
 ```http
-HTTP/1.1 204 No Content
+HTTP/1.1 201 Created
+Content-Type: application/json
+{
+  "value": [
+    {
+      "@odata.type": "#microsoft.graph.industryData.yearTimePeriodDefinition",
+      "displayName": "String",
+      "endDate": "Date",
+      "startDate": "Date",
+      "year": {
+        "@odata.type": "microsoft.graph.industryData.yearReferenceValue"
+      }
+    }
+  ]
+}
 ```

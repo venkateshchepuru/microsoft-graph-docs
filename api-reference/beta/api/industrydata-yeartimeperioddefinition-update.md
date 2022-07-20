@@ -1,13 +1,14 @@
 ---
 title: "Update yearTimePeriodDefinition"
 description: "Update the properties of a yearTimePeriodDefinition object."
-author: "**TODO: Provide Github Name. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=API/Document/Guidelines/Metadata)**"
+author: "mlafleur"
 ms.localizationpriority: medium
-ms.prod: "**TODO: Add MS prod. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=API/Document/Guidelines/Metadata)**"
+ms.prod: "industrydata"
 doc_type: apiPageType
 ---
 
 # Update yearTimePeriodDefinition
+
 Namespace: microsoft.graph.industryData
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
@@ -15,13 +16,14 @@ Namespace: microsoft.graph.industryData
 Update the properties of a [yearTimePeriodDefinition](../resources/industrydata-yeartimeperioddefinition.md) object.
 
 ## Permissions
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
-|Permission type|Permissions (from least to most privileged)|
-|:---|:---|
-|Delegated (work or school account)|**TODO: Provide applicable permissions.**|
-|Delegated (personal Microsoft account)|**TODO: Provide applicable permissions.**|
-|Application|**TODO: Provide applicable permissions.**|
+| Permission type                        | Permissions (from least to most privileged) |
+| :------------------------------------- | :------------------------------------------ |
+| Delegated (work or school account)     | **TODO: Provide applicable permissions.**   |
+| Delegated (personal Microsoft account) | **TODO: Provide applicable permissions.**   |
+| Application                            | **TODO: Provide applicable permissions.**   |
 
 ## HTTP request
 
@@ -29,29 +31,29 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+
+```http
 PATCH /external/industryData/inboundFlows/{inboundFlowId}/year
 PATCH /external/industryData/years/{yearTimePeriodDefinitionId}
 ```
 
 ## Request headers
-|Name|Description|
-|:---|:---|
-|Authorization|Bearer {token}. Required.|
-|Content-Type|application/json. Required.|
+
+| Name          | Description                 |
+| :------------ | :-------------------------- |
+| Authorization | Bearer {token}. Required.   |
+| Content-Type  | application/json. Required. |
 
 ## Request body
+
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
-
-|Property|Type|Description|
-|:---|:---|:---|
-|displayName|String|The name of the year. Required.|
-|endDate|Date|The last day of the year. ISO 8601 date. Required.|
-|startDate|Date|The first day of the year. ISO 8601 date. Required.|
-|year|[microsoft.graph.industryData.yearReferenceValue](../resources/industrydata-yearreferencevalue.md)|Pointer to a year entry in the referenceDefinition collection. Required.|
-
-
+| Property    | Type                                                                                               | Description                                                              |
+| :---------- | :------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------- |
+| displayName | String                                                                                             | The name of the year. Required.                                          |
+| endDate     | Date                                                                                               | The last day of the year. ISO 8601 date. Required.                       |
+| startDate   | Date                                                                                               | The first day of the year. ISO 8601 date. Required.                      |
+| year        | [microsoft.graph.industryData.yearReferenceValue](../resources/industrydata-yearreferencevalue.md) | Pointer to a year entry in the referenceDefinition collection. Required. |
 
 ## Response
 
@@ -60,13 +62,16 @@ If successful, this method returns a `200 OK` response code and an updated [year
 ## Examples
 
 ### Request
+
 The following is an example of a request.
+
 <!-- {
   "blockType": "request",
   "name": "update_yeartimeperioddefinition"
 }
 -->
-``` http
+
+```http
 PATCH https://graph.microsoft.com/beta/external/industryData/inboundFlows/{inboundFlowId}/year
 Content-Type: application/json
 Content-length: 242
@@ -82,16 +87,19 @@ Content-length: 242
 }
 ```
 
-
 ### Response
+
 The following is an example of the response
->**Note:** The response object shown here might be shortened for readability.
+
+> **Note:** The response object shown here might be shortened for readability.
+
 <!-- {
   "blockType": "response",
   "truncated": true
 }
 -->
-``` http
+
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -105,4 +113,3 @@ Content-Type: application/json
   }
 }
 ```
-

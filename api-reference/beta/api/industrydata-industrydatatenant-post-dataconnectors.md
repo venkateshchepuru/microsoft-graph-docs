@@ -1,13 +1,14 @@
 ---
 title: "Create industryDataConnector"
 description: "Create a new industryDataConnector object."
-author: "**TODO: Provide Github Name. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=API/Document/Guidelines/Metadata)**"
+author: "mlafleur"
 ms.localizationpriority: medium
-ms.prod: "**TODO: Add MS prod. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=API/Document/Guidelines/Metadata)**"
+ms.prod: "industrydata"
 doc_type: apiPageType
 ---
 
 # Create industryDataConnector
+
 Namespace: microsoft.graph.industryData
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
@@ -15,13 +16,14 @@ Namespace: microsoft.graph.industryData
 Create a new [industryDataConnector](../resources/industrydata-industrydataconnector.md) object.
 
 ## Permissions
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
-|Permission type|Permissions (from least to most privileged)|
-|:---|:---|
-|Delegated (work or school account)|**TODO: Provide applicable permissions.**|
-|Delegated (personal Microsoft account)|**TODO: Provide applicable permissions.**|
-|Application|**TODO: Provide applicable permissions.**|
+| Permission type                        | Permissions (from least to most privileged) |
+| :------------------------------------- | :------------------------------------------ |
+| Delegated (work or school account)     | **TODO: Provide applicable permissions.**   |
+| Delegated (personal Microsoft account) | **TODO: Provide applicable permissions.**   |
+| Application                            | **TODO: Provide applicable permissions.**   |
 
 ## HTTP request
 
@@ -29,26 +31,27 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+
+```http
 POST /external/industryData/dataConnectors
 ```
 
 ## Request headers
-|Name|Description|
-|:---|:---|
-|Authorization|Bearer {token}. Required.|
-|Content-Type|application/json. Required.|
+
+| Name          | Description                 |
+| :------------ | :-------------------------- |
+| Authorization | Bearer {token}. Required.   |
+| Content-Type  | application/json. Required. |
 
 ## Request body
+
 In the request body, supply a JSON representation of the [industryDataConnector](../resources/industrydata-industrydataconnector.md) object.
 
 You can specify the following properties when creating an **industryDataConnector**.
 
-|Property|Type|Description|
-|:---|:---|:---|
-|displayName|String|Name of the data connector. Required.|
-
-
+| Property    | Type   | Description                           |
+| :---------- | :----- | :------------------------------------ |
+| displayName | String | Name of the data connector. Required. |
 
 ## Response
 
@@ -57,13 +60,16 @@ If successful, this method returns a `201 Created` response code and an [industr
 ## Examples
 
 ### Request
+
 The following is an example of a request.
+
 <!-- {
   "blockType": "request",
   "name": "create_industrydataconnector_from_"
 }
 -->
-``` http
+
+```http
 POST https://graph.microsoft.com/beta/external/industryData/dataConnectors
 Content-Type: application/json
 Content-length: 104
@@ -74,17 +80,20 @@ Content-length: 104
 }
 ```
 
-
 ### Response
+
 The following is an example of the response
->**Note:** The response object shown here might be shortened for readability.
+
+> **Note:** The response object shown here might be shortened for readability.
+
 <!-- {
   "blockType": "response",
   "truncated": true,
   "@odata.type": "microsoft.graph.industryData.industryDataConnector"
 }
 -->
-``` http
+
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -93,4 +102,3 @@ Content-Type: application/json
   "displayName": "String"
 }
 ```
-

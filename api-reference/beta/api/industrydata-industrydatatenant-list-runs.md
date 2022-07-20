@@ -1,9 +1,9 @@
 ---
 title: "List industryDataRuns"
 description: "Get a list of the industryDataRun objects and their properties."
-author: "**TODO: Provide Github Name. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=API/Document/Guidelines/Metadata)**"
+author: "mlafleur"
 ms.localizationpriority: medium
-ms.prod: "**TODO: Add MS prod. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=API/Document/Guidelines/Metadata)**"
+ms.prod: "industrydata"
 doc_type: apiPageType
 ---
 
@@ -46,7 +46,7 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [industryDataRun](../resources/industrydatarun.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [industryDataRun](../resources/industrydata-industrydatarun.md) objects in the response body.
 
 ## Examples
 
